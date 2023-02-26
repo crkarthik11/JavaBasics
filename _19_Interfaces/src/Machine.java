@@ -1,15 +1,16 @@
 package _19_Interfaces.src;
 
+public class Machine implements IStartable {
 
-public class Machine implements Info {
-     
-    private int id = 7;
-     
+    @Override
     public void start() {
-        System.out.println("Machine started.");
+        System.out.println("Inside Machine start");
+
     }
- 
-    public void showInfo() {
-        System.out.println("Machine ID is: " + id);
+
+    public void stop() {
+        System.out.println("Inside Machine stop");
+
     }
+
 }

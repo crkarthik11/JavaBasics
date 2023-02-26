@@ -1,33 +1,29 @@
 package _30_HashMaps.src;
 
-
 import java.util.HashMap;
 import java.util.Map;
- 
+
 public class App {
- 
- 
+
     public static void main(String[] args) {
- 
-        HashMap<Integer, String> map = new HashMap<Integer, String>();
-         
-        map.put(5, "Five");
-        map.put(8, "Eight");
-        map.put(6, "Six");
-        map.put(4, "Four");
-        map.put(2, "Two");
-         
-        String text = map.get(6);
-         
-        System.out.println(text);
-         
-        for(Map.Entry<Integer, String> entry: map.entrySet()) {
-            int key = entry.getKey();
-            String value = entry.getValue();
-             
-            System.out.println(key + ": " + value);
-        }
-         
+        // Key and value
+        // Key is unique
+        // Values can be duplicate
+        // Always access the value using its key
+
+        Map<Integer, String> map = new HashMap<Integer, String>();
+        map.put(1, "one");
+        map.put(2, "two");
+        map.put(3, "three");
+        map.put(4, "four");
+        map.put(5, "four");
+        map.put(null, "nullvalue");
+        map.remove(5);
+        System.out.println(map.get(2));
+        map.keySet();
+
+        System.out.println(map.toString());
+
     }
- 
+
 }
